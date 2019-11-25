@@ -11,3 +11,6 @@ tiny.hex: tiny.elf
 
 flash: tiny.hex
 	sudo avrdude -C ~/avrdude.conf -c linuxspi -pattiny85 -P /dev/spidev0.0 -U flash:w:tiny.hex:i
+
+clean:
+	rm tiny.o tiny.elf tiny.hex
